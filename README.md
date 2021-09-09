@@ -6,11 +6,11 @@ supported by this module.
 
 This README is broken into the following sections:
 
-    1. The kwalletd5-ruby-interface
+1. The kwalletd5-ruby-interface
 
-    2. Understanding the KDE Wallet (KWallet)
+2. Understanding the KDE Wallet (KWallet)
 
-    3. Understanding Qt DBUS (qdbus)
+3. Understanding Qt DBUS (qdbus)
 
 The first section is probably what you're interested in. However, to understand
 how to use the module, you'll want a decent idea of what KDE wallet provides.
@@ -20,13 +20,12 @@ linked to that.
 
 ## 1. The kwalletd5-ruby-interface
 
-    This module (KWalletd5) provides an interface that is split into two main parts:
+This module (KWalletd5) provides an interface that is split into two main parts:
 
-        1.  A class called KWalletConnection that allows connecting to, and editing,
-            a particular wallet.
-
-        2.  A series of functions that allow editing wallets directly (eg. creating
-            or deleting wallets).
+1.  A class called KWalletConnection that allows connecting to, and editing, a
+particular wallet.
+2.  A series of functions that allow editing wallets directly (eg. creating or
+deleting wallets).
 
 ### 1.1: KWalletConnection
 
