@@ -18,6 +18,12 @@ That's part 2. If you want to understand the module enough to edit it - you need
 to understand Qt's DBus. Qt's documentation is great, so I've just
 linked to that.
 
+### Installation
+
+This package is published as a ruby gem. To install it, simply run:
+
+    gem install kwalletd5-wrapper
+
 ## 1. The kwalletd5-ruby-interface
 
 This module (KWalletd5) provides an interface that is split into two main parts:

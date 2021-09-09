@@ -7,6 +7,6 @@ Gem::Specification.new do |s|
   s.email       = 'ericpower@outlook.com'
   s.files       = ["lib/kwalletd5-wrapper.rb"]
   s.homepage    =
-    'https://github/epwr/kwalletd5-ruby-wrapper'
+    'https://github.com/epwr/kwalletd5-ruby-wrapper'
   s.license       = 'MIT'
 end
