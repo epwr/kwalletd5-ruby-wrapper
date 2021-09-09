@@ -53,65 +53,65 @@ module KWalletd5
     end
 
     def replace_key(folder, old_key, new_key)
-      message_kwd5("renameEntry", @wallet_id, folder, old_key, new_key, APP_NAME)
+      message_kwd5("renameEntry", @wallet_id, folder, old_key, new_key, @app_name)
     end
 
     def list_keys(folder)
-      message_kwd5("entryList", @wallet_id, folder, APP_NAME).split("\n")
+      message_kwd5("entryList", @wallet_id, folder, @app_name).split("\n")
     end
 
     def does_key_exist(folder, key)
-      message_kwd5("entryList", @wallet_id, folder, APP_NAME).split("\n").include?(key)
+      message_kwd5("entryList", @wallet_id, folder, @app_name).split("\n").include?(key)
     end
 
     def write_entry(folder, key, value)
-      message_kwd5("writeEntry", @wallet_id, folder, key, value, APP_NAME)
+      message_kwd5("writeEntry", @wallet_id, folder, key, value, @app_name)
     end
 
     def lookup_entry(folder, key)
-      message_kwd5("readEntry", @wallet_id, folder, key, APP_NAME)
+      message_kwd5("readEntry", @wallet_id, folder, key, @app_name)
     end
 
     def delete_entry(folder, key)
-      message_kwd5("removeEntry", @wallet_id, folder, key, APP_NAME)
+      message_kwd5("removeEntry", @wallet_id, folder, key, @app_name)
     end
 
     def write_password(folder, key, value)
-      message_kwd5("writePassword", @wallet_id, folder, key, value, APP_NAME)
+      message_kwd5("writePassword", @wallet_id, folder, key, value, @app_name)
     end
 
     def lookup_password(folder, key)
-      message_kwd5("readPassword", @wallet_id, folder, key, APP_NAME)
+      message_kwd5("readPassword", @wallet_id, folder, key, @app_name)
     end
 
     def write_map(folder, key, value)
-      message_kwd5("writeMap", @wallet_id, folder, key, value, APP_NAME)
+      message_kwd5("writeMap", @wallet_id, folder, key, value, @app_name)
     end
 
     def lookup_map(folder, key)
-      message_kwd5("readMap", @wallet_id, folder, key, APP_NAME)
+      message_kwd5("readMap", @wallet_id, folder, key, @app_name)
     end
 
     def create_folder(folder)
-      message_kwd5("createFolder", @wallet_id, folder, APP_NAME)
+      message_kwd5("createFolder", @wallet_id, folder, @app_name)
     end
 
     def delete_folder(folder)
-      message_kwd5("removeFolder", @wallet_id, folder, APP_NAME)
+      message_kwd5("removeFolder", @wallet_id, folder, @app_name)
     end
 
     def list_folders
-      message_kwd5("folderList", @wallet_id, APP_NAME)
+      message_kwd5("folderList", @wallet_id, @app_name)
     end
 
     def does_folder_exist(folder)
-      message_kwd5("hasFolder", @wallet_id, folder, APP_NAME) == "true"
+      message_kwd5("hasFolder", @wallet_id, folder, @app_name) == "true"
     end
 
     def is_open
       msg = message_kwd5("isOpen", @wallet_name) == "true"
     end
-    
+
     def close!
       message_kwd5("close", @wallet_id, true, @app_name)
     end
