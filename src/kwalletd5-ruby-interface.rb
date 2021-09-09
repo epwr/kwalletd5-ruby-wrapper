@@ -52,10 +52,6 @@ module KWalletd5
       @wallet_name = wallet_name
     end
 
-    def is_open
-      msg = message_kwd5("isOpen", @wallet_name) == "true"
-    end
-
     def replace_key(folder, old_key, new_key)
       message_kwd5("renameEntry", @wallet_id, folder, old_key, new_key, APP_NAME)
     end
@@ -112,6 +108,10 @@ module KWalletd5
       message_kwd5("hasFolder", @wallet_id, folder, APP_NAME) == "true"
     end
 
+    def is_open
+      msg = message_kwd5("isOpen", @wallet_name) == "true"
+    end
+    
     def close!
       message_kwd5("close", @wallet_id, true, @app_name)
     end
